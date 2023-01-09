@@ -1,0 +1,148 @@
+.articles-block {
+	@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
+	@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+
+	// .articles-block__container
+	&__container {
+	}
+
+	// .articles-block__title
+	&__title {
+		@include adaptiveValue('margin-bottom', 60, 30, 1110, 767.98, 1);
+	}
+
+	// .articles-block__slider
+	&__slider {
+		margin: rem(-10) -100% rem(-10) rem(-10);
+		padding: rem(10) 100% rem(10) rem(10);
+		position: relative;
+	}
+
+	// .articles-block__wrapper
+	&__wrapper {
+	}
+
+	// .articles-block__slide
+	&__slide {
+	}
+
+	// .articles-block__btn
+	&__btn {
+		width: rem(68);
+		height: rem(68);
+		border-radius: 50%;
+		background-color: $purple;
+		box-shadow: 0px 15px 15px rgba(111, 115, 238, 0.2);
+		color: $white;
+		position: absolute;
+		top: 50%;
+		left: 34%; // ========= !!! delete =========
+		transform: translate(-50%, -50%);
+		transition: all 0.3s ease 0s;
+
+		&::before {
+			font-weight: 500;
+			font-size: rem(18);
+			transform: rotate(180deg);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $white;
+				color: $purple;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	background-color: $background;
+	border-radius: rem(10);
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	// .article__image-ibg
+	&__image-ibg {
+		display: block;
+		padding-bottom: percent(186, 350);
+		border-radius: rem(10) rem(10) 0 0;
+		overflow: hidden;
+	}
+
+	// .article__body
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		padding: rem(20);
+
+		@media (max-width: $mobile) {
+			padding: rem(15);
+		}
+	}
+
+	// .article__content
+	&__content {
+		flex: 1 1 auto;
+		margin-bottom: rem(18);
+	}
+
+	// .article__title
+	&__title {
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: em(11, 20);
+		}
+	}
+
+	// .article__link
+	&__link {
+		display: block;
+	}
+
+	// .article__text
+	&__text {
+		line-height: math.div(20, 14);
+	}
+
+	// .article__info
+	&__info {
+		display: flex;
+		gap: rem(25);
+	}
+
+	&__date,
+	&__views {
+		display: inline-flex;
+		align-items: center;
+		font-size: rem(12);
+		line-height: math.div(17, 12);
+		color: $gray;
+
+		&::before {
+			font-size: rem(18);
+			margin-right: rem(10);
+			transform: translateY(rem(-2));
+		}
+	}
+
+	// .article__date
+	&__date {
+	}
+
+	// .article__views
+	&__views {
+	}
+}

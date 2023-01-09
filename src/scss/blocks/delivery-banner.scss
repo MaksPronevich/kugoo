@@ -1,0 +1,78 @@
+.delivery-banner {
+	background: radial-gradient(76.7% 707.77% at 23.3% 72.57%, #595959 0%, #3b3e46 100%);
+	border-radius: rem(10);
+	position: relative;
+	overflow: hidden;
+
+	// .delivery-banner__container
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: $tablet) {
+			justify-content: flex-start;
+		}
+	}
+
+	// .delivery-banner__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		flex: 0 1 rem(476);
+		padding: rem(67) 0;
+
+		@media (max-width: $tablet) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: $mobile) {
+			padding: rem(20) 0;
+		}
+	}
+
+	// .delivery-banner__label
+	&__label {
+		display: inline-block;
+		padding: rem(3) rem(11) rem(4);
+		border-radius: rem(5);
+		line-height: math.div(20, 14);
+		background-color: $red;
+		color: $white;
+		margin-bottom: rem(27);
+		@include adaptiveValue('margin-bottom', 27, 10);
+	}
+
+	// .delivery-banner__title
+	&__title {
+		color: $white;
+
+		&:not(:last-child) {
+			margin-bottom: em(27, 35);
+		}
+	}
+
+	// .delivery-banner__image
+	&__image {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: flex-start;
+
+		@media (max-width: $tablet) {
+			right: 0;
+			justify-content: flex-end;
+		}
+
+		img {
+			max-width: 100%;
+
+			@media (max-width: $tablet) {
+				max-width: 70%;
+			}
+		}
+	}
+
+	// .delivery-banner__btn
+	&__btn {
+	}
+}

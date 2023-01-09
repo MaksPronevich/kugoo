@@ -1,0 +1,54 @@
+.tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		gap: rem(20);
+		overflow-x: auto;
+
+		@media (max-width: $mobile) {
+			gap: rem(10);
+		}
+
+		@media (max-width: $mobileSmall) {
+			justify-content: flex-start;
+		}
+	}
+	// .tabs__title
+	&__title {
+		flex: 0 0 auto;
+		font-size: rem(16);
+		line-height: math.div(23, 16);
+		color: $gray;
+		padding: rem(15) rem(25);
+		background: $background;
+		border-radius: rem(5);
+		border: 1px solid transparent;
+		transition: all 0.3s ease 0s;
+
+		&._tab-active {
+			border: 1px solid $purple;
+			color: $purple;
+			background-color: $white;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: rem(14);
+			padding: rem(10) rem(15);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $purple;
+				color: $purple;
+				background-color: $white;
+			}
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__body
+	&__body {
+	}
+}

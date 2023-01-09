@@ -1,0 +1,76 @@
+.promo-card {
+	background-color: $background;
+	border-radius: rem(10);
+	position: relative;
+	overflow: hidden;
+
+	// .promo-card__content
+	&__content {
+		max-width: rem(340);
+		padding: rem(32) rem(40) rem(32);
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: $mobile) {
+			padding: rem(15);
+		}
+	}
+
+	// .promo-card__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(10, 25);
+		}
+	}
+
+	// .promo-card__text
+	&__text {
+		@include adaptiveValue('font-size', 16, 12);
+		line-height: math.div(23, 16);
+
+		&:not(:last-child) {
+			margin-bottom: em(22, 16);
+		}
+	}
+
+	// .promo-card__link
+	&__link {
+	}
+
+	// .promo-card__image
+	&__image {
+		display: flex;
+		justify-content: center;
+
+		@media (min-width: $mobileSmall) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			top: 0;
+			z-index: 1;
+
+			justify-content: flex-end;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .promo-card__decor
+	&__decor {
+		width: rem(446);
+		height: rem(446);
+		border-radius: 50%;
+		background-color: $purple;
+		position: absolute;
+		top: 50%;
+		right: -50%;
+		right: percent(236, -446);
+		transform: translateY(-50%);
+
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+}

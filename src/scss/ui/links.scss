@@ -1,0 +1,37 @@
+._link-basic {
+	display: inline-flex;
+	font-weight: 500;
+	font-size: rem(12);
+	line-height: math.div(13, 12);
+	color: $purple;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom: 1px solid $purple;
+		}
+	}
+}
+
+._link-arrow {
+	display: inline-flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	font-weight: 500;
+	line-height: math.div(20, 14);
+	color: $purple;
+
+	&::before {
+		margin-left: rem(8);
+		transition: transform 0.3s ease 0s;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				transform: translateX(rem(5));
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.promo-cards {
+	// .main-promo-cards__container
+	&__container {
+	}
+
+	// .main-promo-cards__body
+	&__body {
+		display: grid;
+		@include adaptiveValue('gap', 30, 15, 1110, 767.98, 1);
+
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(auto-fill, minmax(rem(470), 1fr));
+		}
+	}
+
+	// .main-promo-cards__item
+	&__item {
+	}
+}

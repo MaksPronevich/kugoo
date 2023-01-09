@@ -1,0 +1,139 @@
+._large-block {
+	max-width: rem(1400);
+	margin: 0 auto;
+}
+
+.home {
+	&__main-banner {
+	}
+
+	&__advantages {
+		@include adaptiveValue('padding-top', 40, 20, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 40, 20, 1110, 767.98, 1);
+	}
+
+	&__catalog {
+		@include adaptiveValue('padding-top', 40, 20, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 55, 27, 1110, 767.98, 1);
+	}
+
+	&__promo-cards {
+		@include adaptiveValue('padding-top', 55, 27, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 55, 27, 1110, 767.98, 1);
+	}
+
+	&__delivery-banner {
+		@include adaptiveValue('margin-top', 55, 27, 1110, 767.98, 1);
+		@include adaptiveValue('margin-bottom', 44, 22, 1110, 767.98, 1);
+	}
+
+	&__categories {
+		@include adaptiveValue('padding-top', 44, 22, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+	}
+
+	&__diller-block {
+		@include adaptiveValue('margin-top', 50, 25, 1110, 767.98, 1);
+		@include adaptiveValue('margin-bottom', 50, 25, 1110, 767.98, 1);
+	}
+}
+
+.logo {
+	img {
+		@include adaptiveValue('width', 116, 87);
+		@include adaptiveValue('height', 43, 32);
+	}
+}
+
+/*==================================================================================================*/
+.socials {
+	display: flex;
+	align-items: center;
+	gap: rem(9);
+	flex-wrap: wrap;
+
+	// .socials__link
+	&__link {
+		&::before {
+			font-size: rem(16);
+			color: $gray;
+			transition: all 0.2s ease 0s;
+
+			@media (max-width: $mobile) {
+				font-size: rem(20);
+			}
+		}
+
+		&._icon-viber {
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						color: #8e24aa;
+					}
+				}
+			}
+		}
+
+		&._icon-whatsapp {
+			&::before {
+				font-size: rem(14);
+
+				@media (max-width: $mobile) {
+					font-size: rem(17);
+				}
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						color: #4caf50;
+					}
+				}
+			}
+		}
+
+		&._icon-telegram {
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						color: #039be5;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*==================================================================================================*/
+._center {
+	text-align: center;
+}
+
+/*==================================================================================================*/
+._gap-30 {
+	@include adaptiveValue('margin-top', 30, 20, 1110, 767.98, 1);
+	@include adaptiveValue('margin-bottom', 30, 20, 1110, 767.98, 1);
+}
+
+/*==================================================================================================*/
+.products {
+	//?
+	@include adaptiveValue('padding-top', 55, 27, 1110, 767.98, 1);
+	@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	@include adaptiveValue('column-gap', 30, 10, 1110, 767.98, 1);
+	row-gap: rem(15);
+
+	@media (max-width: $pc) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: em(550)) {
+		grid-template-columns: 1fr;
+	}
+}

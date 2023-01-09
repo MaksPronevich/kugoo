@@ -1,0 +1,263 @@
+.main-banner {
+	background: radial-gradient(58.73% 541.94% at 75.14% 62.23%, #a6a9ff 0%, #6f73ee 100%);
+	border-radius: rem(10);
+	position: relative;
+
+	// .main-banner__container
+	&__container {
+	}
+
+	// .main-banner__body
+	&__body {
+		padding: rem(40) 0 rem(30);
+
+		@media (max-width: $mobile) {
+			padding: rem(15) 0;
+		}
+	}
+
+	// .main-banner__content
+	&__content {
+		max-width: percent(615, 1110);
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: $mobileSmall) {
+			max-width: 90%;
+		}
+	}
+
+	// .main-banner__slider
+	&__slider {
+		// margin: 0px rem(-30);
+		// padding: 0px rem(30);
+	}
+
+	// .main-banner__wrapper
+	&__wrapper {
+	}
+
+	// .main-banner__slide
+	&__slide {
+	}
+
+	// .main-banner__slider-control
+	&__slider-control {
+		margin-top: rem(46);
+	}
+
+	// .main-banner__image
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		overflow: hidden;
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			max-width: 100%;
+
+			@media (max-width: $mobile) {
+				max-width: 90%;
+			}
+		}
+	}
+
+	// .main-banner__decor
+	&__decor {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			max-width: 100%;
+		}
+
+		@media (max-width: $pc) {
+			max-width: 70%;
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	// .main-banner__tip
+	&__tip {
+		position: absolute;
+		bottom: percent(98, 421);
+		right: percent(280, 1110);
+		// transform: translateX(-50%);
+		z-index: 3;
+	}
+}
+
+.slide-main-banner {
+	// .slide-main-banner__label
+	&__label {
+		display: inline-block;
+		line-height: math.div(20, 14);
+		color: $white;
+		border: 1px solid $white;
+		border-radius: rem(5);
+		padding: rem(4) rem(10);
+
+		&:not(:last-child) {
+			margin-bottom: rem(36);
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+
+	// .slide-main-banner__title
+	&__title {
+		color: $white;
+
+		&:not(:last-child) {
+			margin-bottom: rem(7);
+		}
+	}
+
+	// .slide-main-banner__text
+	&__text {
+		@include adaptiveValue('font-size', 20, 14, 1110, 767.98, 1);
+		line-height: math.div(29, 20);
+		color: $white;
+		margin-bottom: rem(25);
+
+		@media (max-width: $mobile) {
+			margin-bottom: 0;
+		}
+	}
+
+	// .slide-main-banner__button
+	&__button {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.tip {
+	display: flex;
+	align-items: center;
+
+	// .tip__trigger
+	&__trigger {
+		margin-left: rem(85);
+		transform: translateY(rem(9));
+		cursor: pointer;
+
+		&._anim {
+			animation-name: tip;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		}
+	}
+
+	// .tip__content
+	&__content {
+	}
+
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.content-tip {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(2.5px);
+	border-image-source: linear-gradient(266.07deg, rgba(255, 255, 255, 0.2) 2.51%, rgba(255, 255, 255, 0) 100%);
+	border-radius: rem(5);
+	position: relative;
+	padding: rem(13) rem(18) rem(11) rem(13);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+
+	&.showed {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	// .content-tip__circle
+	&__circle {
+		position: absolute;
+		right: rem(-8);
+		z-index: 2;
+	}
+
+	// .content-tip__line
+	&__line {
+		width: rem(96);
+		border-top: 2px dashed $white;
+		position: absolute;
+		right: -50%;
+		top: calc(50% + rem(4));
+		transform: rotate(5deg);
+	}
+
+	// .content-tip__text
+	&__text {
+		line-height: math.div(20, 14);
+		color: $white;
+	}
+
+	// .content-tip__btn
+	&__btn {
+		position: absolute;
+		right: rem(17);
+		bottom: rem(-19);
+		display: inline-flex;
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: math.div(17, 12);
+		text-transform: uppercase;
+		padding: rem(5) rem(10) rem(3) rem(10);
+		border-radius: rem(5);
+		background-color: $white;
+		color: $purple;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
+}
+
+.tip-circle {
+	width: rem(16);
+	height: rem(16);
+	background-color: $purple;
+	border: 3px solid $white;
+	border-radius: 50%;
+}
+
+@keyframes tip {
+	0% {
+		transform: translateY(rem(9));
+	}
+
+	50% {
+		transform: translateY(rem(9)) scale(1.2);
+	}
+
+	100% {
+		transform: translateY(rem(9));
+	}
+}

@@ -1,0 +1,58 @@
+.categories {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(240), 1fr));
+	@include adaptiveValue('gap', 30, 15, 1110, 767.98, 1);
+
+	// .categories__item
+	&__item {
+	}
+}
+
+.item-categories {
+	background: $background;
+	border-radius: rem(10);
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	// .item-categories__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(255, 255);
+	}
+
+	// .item-categories__info
+	&__info {
+		font-weight: 500;
+		color: $white;
+		position: absolute;
+		bottom: rem(10);
+		left: rem(10);
+		right: rem(10);
+		padding: rem(10) rem(16);
+		border-radius: rem(10);
+		background: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(10px);
+	}
+
+	// .item-categories__name
+	&__name {
+		font-size: rem(18);
+		@include adaptiveValue('font-size', 18, 14, 1110, 767.98, 1);
+		line-height: math.div(26, 18);
+
+		&:not(:last-child) {
+			margin-bottom: em(2, 18);
+		}
+	}
+
+	// .item-categories__price
+	&__price {
+		line-height: math.div(20, 14);
+	}
+}

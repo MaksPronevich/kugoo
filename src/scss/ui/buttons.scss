@@ -1,0 +1,114 @@
+._btn {
+	display: inline-flex;
+	justify-content: center;
+	font-size: rem(16);
+	line-height: math.div(23, 16);
+	white-space: nowrap;
+	padding: rem(15) rem(25);
+	border-radius: rem(5);
+	transition: all 0.3s ease 0s;
+
+	@media (max-width: $mobile) {
+		font-size: rem(14);
+		padding: rem(10);
+	}
+
+	&--small {
+		font-size: rem(12);
+		line-height: math.div(17, 12);
+		padding: rem(10) rem(20);
+
+		@media (max-width: $mobile) {
+			padding: rem(8) rem(10);
+		}
+	}
+
+	&--white {
+		color: $purple;
+		background-color: $white;
+		border: 1px solid $purple;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: $purple;
+			}
+		}
+	}
+
+	&--purple {
+		color: $white;
+		background-color: $purple;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $purple-hover;
+			}
+		}
+	}
+
+	&--orange {
+		color: $white;
+		background-color: $orange;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $orange-hover;
+			}
+		}
+	}
+
+	&--gray {
+		color: $gray;
+		background-color: $background;
+		border: 1px solid transparent;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purple;
+				background-color: $white;
+				border: 1px solid $purple;
+			}
+		}
+
+		&.current {
+			color: $purple;
+			background-color: $white;
+			border: 1px solid $purple;
+			cursor: default;
+		}
+	}
+
+	&--outline {
+		background-color: $white;
+		border: 1px solid transparent;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: transparent;
+				border: 1px solid $white;
+			}
+		}
+	}
+
+	&--outline-purple {
+		color: $purple;
+	}
+
+	&--outline-black {
+		color: $mainColor;
+	}
+
+	&--outline-orange {
+		color: $orange;
+	}
+
+	&--outline-blue {
+		color: $blue;
+	}
+
+	&--fw {
+		width: 100%;
+	}
+}

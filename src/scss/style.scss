@@ -1,0 +1,142 @@
+@use 'sass:math';
+@import 'base/mixins';
+@import 'fonts/fonts';
+@import 'fonts/icons';
+
+$fontFamily: 'Jost';
+$fontSize: rem(14);
+
+$mainColor: #282739;
+$purple: #6f73ee;
+$purple-hover: #8185f9;
+$gray: #5d6c7b;
+$gray-light: #eaebed;
+$white: #ffffff;
+$background: #f4f7fb;
+$red: #ee685f;
+$orange: #f3a712;
+$orange-hover: #fab836;
+$green: #75d14a;
+$blue: #3c89fd;
+
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1110;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+$responsiveType: 1;
+
+/*==================================================================================================*/
+
+@import 'base/null';
+
+body {
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+
+/*==================================================================================================*/
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@media (max-width: $mobile) {
+		padding-bottom: rem(50);
+	}
+
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+/*==================================================================================================*/
+
+@if ($responsiveType==1) {
+	// Отзывчивая
+	[class*='__container'] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// По брейк-поинтам
+	[class*='__container'] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+@import 'base';
+
+/*==================================================================================================*/
+@import 'common';
+@import 'ui/typography';
+@import 'ui/buttons';
+@import 'ui/links';
+@import 'ui/sliders';
+
+/*==================================================================================================*/
+@import 'pages/home';
+
+/*==================================================================================================*/
+@import 'components/card';
+@import 'components/small-blocks';
+@import 'components/promo-card';
+
+/*==================================================================================================*/
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/main-banner';
+@import 'blocks/promo-cards';
+@import 'blocks/delivery-banner';
+@import 'blocks/categories';
+@import 'blocks/diller-block';
+
+// @import 'blocks/favorable-prices';
+// @import 'blocks/articles';
+// @import 'blocks/video';
+
+/*==================================================================================================*/

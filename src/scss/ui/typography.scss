@@ -1,0 +1,51 @@
+// xxl = h2
+// xl = h3
+// lg = h4
+// md = h5
+// sm = h6
+
+._fw-700 {
+	font-weight: 700;
+}
+
+._fw-600 {
+	font-weight: 600;
+}
+
+._fw-500 {
+	font-weight: 500;
+}
+
+/*==================================================================================================*/
+
+._title-sm {
+	@include adaptiveValue('font-size', 16, 14, 1110, 767.98, 1);
+	line-height: math.div(23, 16);
+}
+
+._title-md {
+	@include adaptiveValue('font-size', 18, 16, 1110, 767.98, 1);
+	line-height: math.div(26, 18);
+}
+
+._title-lg {
+	@include adaptiveValue('font-size', 20, 18, 1110, 767.98, 1);
+	line-height: math.div(24, 20);
+}
+
+._title-xl {
+	font-weight: 600;
+	@include adaptiveValue('font-size', 25, 20, 1110, 767.98, 1);
+	line-height: math.div(36, 25);
+	text-transform: uppercase;
+}
+
+._title-xxl {
+	font-weight: 600;
+	font-size: rem(35);
+	@include adaptiveValue('font-size', 35, 22, 1110, 767.98, 1);
+	line-height: math.div(51, 35);
+	text-transform: uppercase;
+}
+
+/*==================================================================================================*/

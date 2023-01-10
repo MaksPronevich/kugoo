@@ -26,7 +26,11 @@
 		}
 
 		@media (max-width: $mobile) {
-			padding: rem(20) 0;
+			flex: 0 1 60%;
+			padding: rem(15) 0;
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 100%;
 		}
 	}
 
@@ -35,11 +39,14 @@
 		display: inline-block;
 		padding: rem(3) rem(11) rem(4);
 		border-radius: rem(5);
+		@include adaptiveValue('font-size', 14, 10, 1110, 767.98, 1);
 		line-height: math.div(20, 14);
 		background-color: $red;
 		color: $white;
-		margin-bottom: rem(27);
-		@include adaptiveValue('margin-bottom', 27, 10);
+
+		&:not(:last-child) {
+			@include adaptiveValue('margin-bottom', 27, 10, 1110, 767.98, 1);
+		}
 	}
 
 	// .delivery-banner__title

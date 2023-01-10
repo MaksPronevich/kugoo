@@ -1,0 +1,22 @@
+.reviews {
+	// .reviews__container
+	&__container {
+	}
+
+	// .reviews__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(17, 35);
+		}
+	}
+
+	// .reviews__link-wrap
+	&__link-wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	// .reviews__link
+	&__link {
+	}
+}

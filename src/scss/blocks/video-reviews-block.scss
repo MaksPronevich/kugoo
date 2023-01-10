@@ -1,7 +1,4 @@
 .video-block {
-	@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
-	@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
-
 	// .video-block__container
 	&__container {
 		position: relative;

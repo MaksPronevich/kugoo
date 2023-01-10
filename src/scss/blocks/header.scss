@@ -1,12 +1,29 @@
 .header {
-	// @include adaptiveValue('margin-bottom', 30, 20, 1110, 767.98, 1);
-
 	// .header__top
 	&__top {
 	}
 
 	// .header__body
 	&__body {
+		padding: rem(30) 0 rem(35);
+		transition: all 0.3s ease 0s;
+
+		@media (max-width: $mobile) {
+			padding: rem(18) 0;
+		}
+
+		&._header-scroll {
+			// @media (min-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 9999;
+			padding: rem(10) 0;
+			background-color: $white;
+			border-bottom: 1px solid #ecf3ff;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			// }
+		}
 	}
 
 	// .header__navigation
@@ -224,12 +241,6 @@
 /*==================================================================================================*/
 
 .body-header {
-	padding: rem(30) 0 rem(35);
-
-	@media (max-width: $mobile) {
-		padding: rem(18) 0;
-	}
-
 	// .body-header__container
 	&__container {
 		display: flex;

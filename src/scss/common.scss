@@ -36,6 +36,26 @@
 		@include adaptiveValue('margin-top', 50, 25, 1110, 767.98, 1);
 		@include adaptiveValue('margin-bottom', 50, 25, 1110, 767.98, 1);
 	}
+
+	&__prices-block {
+		@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+	}
+
+	&__video-block {
+		@include adaptiveValue('margin-top', 50, 25, 1110, 767.98, 1);
+		@include adaptiveValue('margin-bottom', 50, 25, 1110, 767.98, 1);
+	}
+
+	&__reviews {
+		@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
+		@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+	}
+
+	// &__video-reviews-block {
+	// 	@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
+	// 	@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
+	// }
 }
 
 .logo {

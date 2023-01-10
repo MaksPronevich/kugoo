@@ -93,7 +93,6 @@
 		position: absolute;
 		bottom: percent(98, 421);
 		right: percent(280, 1110);
-		// transform: translateX(-50%);
 		z-index: 3;
 	}
 }
@@ -102,6 +101,7 @@
 	// .slide-main-banner__label
 	&__label {
 		display: inline-block;
+		@include adaptiveValue('font-size', 14, 10, 1110, 767.98, 1);
 		line-height: math.div(20, 14);
 		color: $white;
 		border: 1px solid $white;
@@ -109,13 +109,7 @@
 		padding: rem(4) rem(10);
 
 		&:not(:last-child) {
-			margin-bottom: rem(36);
-		}
-
-		@media (max-width: $mobile) {
-			&:not(:last-child) {
-				margin-bottom: rem(10);
-			}
+			@include adaptiveValue('margin-bottom', 36, 10, 1110, 767.98, 1);
 		}
 	}
 

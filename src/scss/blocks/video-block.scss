@@ -1,0 +1,16 @@
+.video-block {
+	position: relative;
+
+	// .video-block__image-ibg
+	&__image-ibg {
+		padding-bottom: percent(630, 1380);
+	}
+
+	// .video-block__btn-play
+	&__btn-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?5i6rum');
+  src:  url('fonts/icons.eot?5i6rum#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?5i6rum') format('truetype'),
+    url('fonts/icons.woff?5i6rum') format('woff'),
+    url('fonts/icons.svg?5i6rum#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-accumulator:before {
+  content: "\e900";
+}
+._icon-arrow:before {
+  content: "\e901";
+}
+._icon-bike:before {
+  content: "\e902";
+}
+._icon-billfold:before {
+  content: "\e903";
+}
+._icon-calendar:before {
+  content: "\e904";
+}
+._icon-call:before {
+  content: "\e905";
+}
+._icon-cart:before {
+  content: "\e906";
+}
+._icon-cart-outline:before {
+  content: "\e907";
+}
+._icon-close:before {
+  content: "\e908";
+}
+._icon-balance-scale:before {
+  content: "\e909";
+}
+._icon-delivery:before {
+  content: "\e90a";
+}
+._icon-discount:before {
+  content: "\e90b";
+}
+._icon-electric-scooter:before {
+  content: "\e90c";
+}
+._icon-favorite:before {
+  content: "\e90d";
+}
+._icon-favorite-outline:before {
+  content: "\e90e";
+}
+._icon-guarantee:before {
+  content: "\e90f";
+}
+._icon-home:before {
+  content: "\e910";
+}
+._icon-list-marker:before {
+  content: "\e911";
+}
+._icon-play:before {
+  content: "\e912";
+}
+._icon-plus:before {
+  content: "\e913";
+}
+._icon-power:before {
+  content: "\e914";
+}
+._icon-remove:before {
+  content: "\e915";
+}
+._icon-scooter:before {
+  content: "\e916";
+}
+._icon-search:before {
+  content: "\e917";
+}
+._icon-select-arrow:before {
+  content: "\e918";
+}
+._icon-slider-arrow:before {
+  content: "\e919";
+}
+._icon-speedometer:before {
+  content: "\e91a";
+}
+._icon-star:before {
+  content: "\e91b";
+}
+._icon-telegram:before {
+  content: "\e91c";
+}
+._icon-timer:before {
+  content: "\e91d";
+}
+._icon-vacuum-cleaner:before {
+  content: "\e91e";
+}
+._icon-viber:before {
+  content: "\e91f";
+}
+._icon-view:before {
+  content: "\e920";
+}
+._icon-weighing:before {
+  content: "\e921";
+}
+._icon-whatsapp:before {
+  content: "\e922";
+}

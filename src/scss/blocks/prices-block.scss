@@ -1,30 +1,27 @@
-.favorable-prices {
-	@include adaptiveValue('padding-top', 50, 25, 1110, 767.98, 1);
-	@include adaptiveValue('padding-bottom', 50, 25, 1110, 767.98, 1);
-
-	// .favorable-prices__container
+.prices-block {
+	// .prices-block__container
 	&__container {
 	}
 
-	// .favorable-prices__title
+	// .prices-block__title
 	&__title {
 		&:not(:last-child) {
 			margin-bottom: em(18, 35);
 		}
 	}
 
-	// .favorable-prices__caption
+	// .prices-block__caption
 	&__caption {
 		@include adaptiveValue('font-size', 20, 16, 1110, 767.98, 1);
 		line-height: math.div(29, 20);
 	}
 
-	// .favorable-prices__tabs
+	// .prices-block__tabs
 	&__tabs {
 		@include adaptiveValue('margin-top', 50, 30, 1110, 767.98, 1);
 	}
 
-	// .favorable-prices__wrapper
+	// .prices-block__wrapper
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
@@ -32,30 +29,33 @@
 		@include adaptiveValue('margin-top', 50, 30, 1110, 767.98, 1);
 	}
 
-	// .favorable-prices__item
+	// .prices-block__item
 	&__item {
 	}
 }
 
-.tabs {
-	// .tabs__navigation
+.tabs-prices {
+	// .tabs-prices__navigation
 	&__navigation {
+		display: flex;
+		justify-content: center;
+		gap: rem(20);
 	}
 
-	// .tabs__title
-	&__title {
+	// .tabs-prices__btn
+	&__btn {
 	}
 
-	// .tabs__content
+	// .tabs-prices__content
 	&__content {
 	}
 
-	// .tabs__body
+	// .tabs-prices__body
 	&__body {
 	}
 }
 
-.item-favorable-prices {
+.item-prices-block {
 	border: 1px solid $gray-light;
 	border-radius: rem(10);
 	padding: rem(28) rem(20);
@@ -64,7 +64,7 @@
 		padding: rem(20) rem(15);
 	}
 
-	//item-favorable-prices--mod
+	//item-prices-block--mod
 	&--mod {
 		background-color: $background;
 		display: flex;
@@ -79,7 +79,7 @@
 		z-index: 1;
 	}
 
-	// .item-favorable-prices__icon
+	// .item-prices-block__icon
 	&__icon {
 		&::before {
 			color: $purple;
@@ -97,7 +97,7 @@
 		}
 	}
 
-	// .item-favorable-prices__title
+	// .item-prices-block__title
 	&__title {
 		font-weight: 500;
 		line-height: math.div(22, 18);
@@ -111,26 +111,30 @@
 		}
 	}
 
-	// .item-favorable-prices__text
+	// .item-prices-block__text
 	&__text {
 		line-height: math.div(18, 14);
 	}
 
-	// .item-favorable-prices__link
+	// .item-prices-block__link
 	&__link {
 	}
 
-	// .item-favorable-prices__link-more
+	// .item-prices-block__link-more
 	&__link-more {
 	}
 
-	// .item-favorable-prices__image-ibg
+	// .item-prices-block__image-ibg
 	&__image-ibg {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		top: 0;
-		width: 50%;
+		width: 60%;
 		z-index: 0;
+
+		@media (max-width: $mobile) {
+			width: 50%;
+		}
 	}
 }

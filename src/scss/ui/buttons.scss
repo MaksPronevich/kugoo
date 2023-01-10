@@ -71,7 +71,7 @@
 			}
 		}
 
-		&.current {
+		&._tab-active {
 			color: $purple;
 			background-color: $white;
 			border: 1px solid $purple;
@@ -112,3 +112,48 @@
 		width: 100%;
 	}
 }
+
+._btn-play {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	color: $purple;
+	background-color: $white;
+	border-radius: 50%;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $purple;
+			color: $white;
+		}
+	}
+
+	&::before {
+		transform: translate(5%, 0);
+	}
+
+	&--xl {
+		@include adaptiveValue('width', 136, 45, 1110, 767.98, 1);
+		@include adaptiveValue('height', 136, 45, 1110, 767.98, 1);
+		@include adaptiveValue('font-size', 35, 15, 1110, 767.98, 1);
+	}
+
+	&--md {
+		@include adaptiveValue('width', 100, 35, 1110, 767.98, 1);
+		@include adaptiveValue('height', 100, 35, 1110, 767.98, 1);
+		@include adaptiveValue('font-size', 25, 12, 1110, 767.98, 1);
+	}
+
+	&--sm {
+		@include adaptiveValue('width', 68, 30, 1110, 767.98, 1);
+		@include adaptiveValue('height', 68, 30, 1110, 767.98, 1);
+		@include adaptiveValue('font-size', 20, 8, 1110, 767.98, 1);
+	}
+}
+
+// 136
+// 100
+// 68
+//

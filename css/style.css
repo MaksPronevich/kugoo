@@ -1657,6 +1657,7 @@ body::after {
   height: 3.125rem;
   border-radius: 50%;
   color: #ffffff;
+  z-index: 9999;
   background-color: rgba(111, 115, 238, 0.5);
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
